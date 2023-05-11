@@ -22,8 +22,8 @@ con otro color (juegan el descenso).
 3- Despliegue:
 La aplicación debe estar online utilizando las siguientes plataformas que ofrecen una capa
 gratuita para tal fin:
-- Heroku
-- MongoDB Atlas 
+- Heroku.
+- MongoDB Atlas.
 <br>
 4- SEO:
 - Usando plugin de chrome SEO 1 meta click o similar, revisar el contenido. Description,
