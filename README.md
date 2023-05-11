@@ -18,13 +18,13 @@ con otro color (juegan el descenso).
 - Git
 - Node.js (express.js, cheerio o similar, mongoose, handlebars)
 - MongoDB
--<br>
+- <br>
 3- Despliegue:
 La aplicación debe estar online utilizando las siguientes plataformas que ofrecen una capa
 gratuita para tal fin:
 - Heroku.
 - MongoDB Atlas.
--<br>
+- <br>
 4- SEO:
 - Usando plugin de chrome SEO 1 meta click o similar, revisar el contenido. Description,
 titles, h1, imagen de preview, etc.
