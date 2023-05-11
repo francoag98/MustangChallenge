@@ -21,7 +21,7 @@ con otro color (juegan el descenso).<br>
 La aplicación debe estar online utilizando las siguientes plataformas que ofrecen una capa
 gratuita para tal fin:
 - Heroku
-- MongoDB Atlas
+- MongoDB Atlas <br>
 4- SEO:
 - Usando plugin de chrome SEO 1 meta click o similar, revisar el contenido. Description,
 titles, h1, imagen de preview, etc.
