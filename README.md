@@ -12,7 +12,7 @@ Es deseado mostrar la tabla con los equipos y escudos correspondientes.
 TIP para el responsive: en celular mostrar columnas importantes (PJ, G, E, P, Pts), en pantallas
 más anchas mostrar todas las columnas.
 Destacar los cuatro primeros equipos con un color (acceden a otra copa) y los cuatro últimos
-con otro color (juegan el descenso).
+con otro color (juegan el descenso).<br>
 2- Tecnologias a utilizar.
 - Git
 - Node.js (express.js, cheerio o similar, mongoose, handlebars)
