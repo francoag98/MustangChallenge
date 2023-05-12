@@ -1,6 +1,21 @@
 import { Request, Response, Router } from "express";
 import Equipo from "../model/Equipo";
+import { scrapping } from "../utils/scrappingFunction";
+const cheerio = require("cheerio");
 const route = Router();
+
+route.get("/", async (req, res) => {
+  try {
+    const data = await scrapping();
+    const $: any = cheerio.load(data).html();
+    const tabla = $("div.collapse show");
+    console.log(tabla);
+
+    res.status(200).send("hola");
+  } catch (error) {
+    res.status(400).send("no");
+  }
+});
 
 route.post("/", async (req: Request, res: Response) => {
   const body = req.body;
