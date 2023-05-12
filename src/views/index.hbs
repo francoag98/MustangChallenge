@@ -1,0 +1,37 @@
+<h1 style="text-align: center;">Tabla de Posiciones Futbol Argentino</h1>
+<table style="margin: 0 auto; display:table; border:1px solid gray; padding:2px; background-color:#DEDEDE; width:100%;" class="center">
+    <thead>
+        <tr>
+            <th style="padding:0.2rem; border:1px solid gray; color:black; background-color:#F5F5F1">Pos</th>
+            <th style="padding:0.2rem; border:1px solid gray; color:black; background-color:#F5F5F1">Equipo</th>
+            <th style="padding:0.2rem; border:1px solid gray; color:black; background-color:#F5F5F1">PJ</th>
+            <th style=" border:1px solid gray; color:black; background-color:#F5F5F1">G</th>
+            <th style=" border:1px solid gray; color:black; background-color:#F5F5F1">E</th>
+            <th style=" border:1px solid gray; color:black; background-color:#F5F5F1">P</th>
+            <th style="padding:0.2rem; border:1px solid gray; color:black; background-color:#F5F5F1;" class="cell-off">GF</th>
+            <th style="padding:0.2rem; border:1px solid gray; color:black; background-color:#F5F5F1;" class="cell-off">GC</th>
+            <th style="padding:0.2rem; border:1px solid gray; color:black; background-color:#F5F5F1;" class="cell-off">DG</th>
+            <th style="padding:0.2rem; border:1px solid gray; color:black; background-color:#F5F5F1;">Pts</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each equipos}}
+        
+        <tr style="border: 2px solid gray;">
+            <td style="text-align: center; border:1px solid gray; padding:2px; color:black; background-color:#F5F5F1; ">{{position}}</td>
+            <td style="display:flex; justify-content:between; border:1px solid gray; align-items:center; padding:0.4rem; gap:6px; color:black;">
+                <img src={{urlImage}} alt="imagen_logo">
+                <span>{{name}}</span>
+            </td>
+            <td style="text-align: center; border:1px solid gray; padding:6px; color:black; background-color:#F5F5F1" class="padding">{{partidosJugados}}</td>
+            <td style="text-align: center; border:1px solid gray; padding:6px; color:black; background-color:#F5F5F1" class="padding">{{Ganados}}</td>
+            <td style="text-align: center; border:1px solid gray; padding:10px; color:black; background-color:#F5F5F1" class="padding">{{Empatados}}</td>
+            <td style="text-align: center; border:1px solid gray; padding:6px; color:black; background-color:#F5F5F1" class="padding">{{Perdidos}}</td>
+            <td style="text-align: center; border:1px solid gray; padding:2px; color:black; background-color:#F5F5F1;" class="cell-off">{{golesAfavor}}</td>
+            <td style="text-align: center; border:1px solid gray; padding:2px; color:black; background-color:#F5F5F1;" class="cell-off">{{golEnContra}}</td>
+            <td style="text-align: center; border:1px solid gray; padding:2px; color:black; background-color:#F5F5F1;" class="cell-off">{{difDeGoles}}</td>
+            <td style="text-align: center; border:1px solid gray; padding:6px; color:black; background-color:#F5F5F1;">{{puntos}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,4 +1,5 @@
 import axios from "axios";
+import Equipo from "../model/Equipo";
 const cheerio = require("cheerio");
 interface Equipo {
   position: number;
@@ -13,7 +14,7 @@ interface Equipo {
   puntos: number;
   urlImage: string;
 }
-export const scrapping = async () => {
+export const scraping = async () => {
   const response = await axios.get(
     "https://www.futbolargentino.com/primera-division/tabla-de-posiciones"
   );
@@ -46,12 +47,11 @@ export const scrapping = async () => {
       golEnContra: Number(golesEnContra),
       difDeGoles: Number(golesAfavor - golesEnContra),
       puntos: Number(puntos),
-      urlImage: urlImage,
+      urlImage: urlImage as string,
     };
     equipos.push(equipoInfo);
   });
-  console.log(equipos);
-  return equipos;
-};
 
-scrapping();
+  await Equipo.deleteMany({});
+  await Equipo.create(equipos);
+};

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        tr:nth-child(-n+4) {
+            background-color: #70FF8B !important;
+        }
+        tr:nth-last-child(-n+4) {
+            background-color: #7D394D !important;
+        }
+        @media(max-width: 500px) {
+            
+            h1{
+                font-size: x-large;
+            }
+            .cell-off{
+                display: none;
+            }
+        }
+        @media(max-width: 400px) {
+            .center{
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+    <title>Tabla LPF Posiciones</title>
+</head>
+<body>
+    <main style="width: 80rem; margin:0 auto; max-width:100%;">
+        {{{body}}}
+    </main>
+</body>
+</html>
