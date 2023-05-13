@@ -29,9 +29,9 @@ server.engine(
 server.use(express.static(path.join(__dirname + "public")));
 server.set("view engine", ".hbs");
 //Programamos el web scraping cada 24hs
-cron.schedule("* * * * *", () => {
+cron.schedule("0 0 */2 * * *", () => {
   scraping();
-  console.log("scrapping programado cada 1 minuto");
+  console.log("scraping programado cada 1 minuto");
 });
 
 server.get("/", async (req: Request, res: Response) => {
