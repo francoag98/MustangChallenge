@@ -8,11 +8,10 @@ import path from "path";
 import { create } from "express-handlebars";
 import { allowInsecurePrototypeAccess } from "@handlebars/allow-prototype-access";
 const handlebars = require("handlebars");
-const template = require("handlebars-template-loader");
 
 export const server = express();
 require("./mongo");
-
+const views = require("../build/views/index.js");
 const PORT = process.env.PORT || 3001;
 server.use(morgan("dev"));
 server.use(express.json());
@@ -27,6 +26,7 @@ server.engine(
     handlebars: allowInsecurePrototypeAccess(handlebars),
   }).engine
 );
+server.engine(".hbs", views["main"]);
 server.use(express.static(path.join(__dirname + "public")));
 server.set("view engine", ".hbs");
 
