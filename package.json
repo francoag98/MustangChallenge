@@ -4,8 +4,8 @@
   "description": "Challenge",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && npm run build-views",
-    "build-views": "handlebars src/views/layouts/main.hbs src/views/index.hbs -f build/views/index.js",
+    "build": "npm run build-views && tsc -p tsconfig.build.json",
+    "build-views": "handlebars ./src/views/ -c -p -f build/views/index.js",
     "start": "node build/index.js",
     "dev": "nodemon"
   },
