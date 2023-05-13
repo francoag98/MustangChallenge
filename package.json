@@ -4,7 +4,8 @@
   "description": "Challenge",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run build:handlebars",
+    "build:handlebars": "handlebars src/views/ -f -c views/index.js",
     "start": "node build/index.js",
     "dev": "nodemon"
   },
@@ -38,7 +39,9 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
+    "@types/handlebars": "^4.1.0",
     "@types/morgan": "^1.9.4",
-    "@types/request-promise": "^4.1.48"
+    "@types/request-promise": "^4.1.48",
+    "handlebars-template-loader": "^1.0.0"
   }
 }

@@ -8,6 +8,7 @@ import path from "path";
 import { create } from "express-handlebars";
 import { allowInsecurePrototypeAccess } from "@handlebars/allow-prototype-access";
 const handlebars = require("handlebars");
+const template = require("handlebars-template-loader");
 
 export const server = express();
 require("./mongo");
