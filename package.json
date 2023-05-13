@@ -4,10 +4,9 @@
   "description": "Challenge",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build-views && tsc -p tsconfig.build.json",
-    "build-views": "handlebars ./src/views/ -c -p -f build/views/index.js -r",
+    "build-views": "handlebars views/ -f build/views.js",
+    "build": "npm run build-views && tsc",
     "start": "node build/index.js",
-    "add-translation": "cp views/ build/views/ -r",
     "dev": "nodemon"
   },
   "repository": {
@@ -29,6 +28,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.7",
+    "handlebars-cli": "^0.1.2",
     "mongoose": "^7.1.1",
     "morgan": "^1.10.0",
     "node-cron": "^3.0.2",

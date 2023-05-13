@@ -15,7 +15,7 @@ require("./mongo");
 const PORT = process.env.PORT || 3001;
 server.use(morgan("dev"));
 server.use(express.json());
-server.set("views", path.join(__dirname, "./views"));
+server.set("views", path.join(__dirname, "views"));
 server.engine(
   ".hbs",
   create({
