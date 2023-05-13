@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import { ConnectOptions } from "mongoose";
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 
 dotenv.config();
 const DB_USER = process.env.DB_USER;
