@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const DB_USER = process.env.DB_USER;
 const DB_PASSWORD = process.env.DB_PASSWORD;
-const DB_NAME = "MustangChallenge";
+const DB_NAME = process.env.DB_NAME;
 const connectionString: string = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.ehrjjit.mongodb.net/${DB_NAME}`;
 
 mongoose.set("strictQuery", false);

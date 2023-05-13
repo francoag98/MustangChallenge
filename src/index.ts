@@ -28,10 +28,11 @@ server.engine(
 );
 server.use(express.static(path.join(__dirname + "public")));
 server.set("view engine", ".hbs");
-//Programamos el web scraping cada 24hs
+
+//Programamos el web scraping cada 2hs
 cron.schedule("0 0 */2 * * *", () => {
   scraping();
-  console.log("scraping programado cada 1 minuto");
+  console.log("scraping programado cada 2hs");
 });
 
 server.get("/", async (req: Request, res: Response) => {
